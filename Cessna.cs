@@ -2,15 +2,15 @@ using System;
 
 namespace GaryGarage
 {
-    public class Cessna : Vehicle
+    public class Cessna : Vehicle, IGasVehicles
     {
         public double FuelCapacity { get; set; }
 
+        public double CurrentTankPercentage { get; set; }
         public void RefuelTank()
         {
-            // method definition omitted
+            CurrentTankPercentage = 100;
         }
-
         public override void Drive()
         {
             Console.WriteLine($"The {this.MainColor} Cessna flies by you, Zoooooom!");

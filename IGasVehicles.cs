@@ -4,7 +4,9 @@ namespace GaryGarage
 {
     public interface IGasVehicles
     {
-        List<string> electricVehicles { get; }
-        void Learn();
+        double FuelCapacity { get; set; }
+        double CurrentTankPercentage { get; set; }
+
+        void RefuelTank();
     }
 }

@@ -4,7 +4,8 @@ namespace GaryGarage
 {
     public interface IElectricVehicle
     {
-        List<string> electricVehicles { get; }
+        double BatteryKWh { get; set; }
+        double CurrentChargePercentage { get; set; }
         void ChargeBattery();
     }
 }

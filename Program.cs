@@ -10,7 +10,7 @@ namespace GaryGarage
             Zero fx = new Zero();
             Tesla modelS = new Tesla();
 
-            List <???> electricVehicles = new List<???> () {
+            List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>() {
                 fx, fxs, modelS
               };
 
@@ -36,7 +36,7 @@ namespace GaryGarage
             Ram ram = new Ram();
             Cessna cessna150 = new Cessna();
 
-            List <???> gasVehicles = new List<???> () {
+            List<IGasVehicles> gasVehicles = new List<IGasVehicles>() {
                 ram, cessna150
               };
 
