@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GaryGarage
 {
@@ -10,23 +11,27 @@ namespace GaryGarage
             Zero fx = new Zero();
             Tesla modelS = new Tesla();
 
+            fxs.CurrentChargePercentage = 5;
+            fx.CurrentChargePercentage = 10;
+            modelS.CurrentChargePercentage = 20;
+
             List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>() {
                 fx, fxs, modelS
               };
 
             Console.WriteLine("Electric Vehicles");
-            foreach (??? ev in electricVehicles)
+            foreach (IElectricVehicle ev in electricVehicles)
             {
                 Console.WriteLine($"{ev.CurrentChargePercentage}");
             }
 
-            foreach (??? ev in electricVehicles)
+            foreach (IElectricVehicle ev in electricVehicles)
             {
                 // This should charge the vehicle to 100%
                 ev.ChargeBattery();
             }
 
-            foreach (??? ev in electricVehicles)
+            foreach (IElectricVehicle ev in electricVehicles)
             {
                 Console.WriteLine($"{ev.CurrentChargePercentage}");
             }
