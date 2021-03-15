@@ -6,46 +6,56 @@ namespace GaryGarage
     {
         static void Main(string[] args)
         {
-            Zero sr = new Zero()
-            {
-                MainColor = "blue",
-                MaximumOccupancy = "two",
-                BatteryKWh = 14.4
-            };
-            Ram longhorn = new Ram()
-            {
-                MainColor = "black",
-                MaximumOccupancy = "four",
-                FuelCapacity = 26
-            };
-            Tesla model3 = new Tesla()
-            {
-                MainColor = "white",
-                MaximumOccupancy = "four",
-                BatteryKWh = 75
-            };
-            Cessna cutlass = new Cessna()
-            {
-                MainColor = "red",
-                MaximumOccupancy = "three",
-                FuelCapacity = 62
-            };
+            Zero fxs = new Zero();
+            Zero fx = new Zero();
+            Tesla modelS = new Tesla();
 
-            sr.Drive();
-            sr.Turn();
-            sr.Stop();
-            longhorn.Drive();
-            longhorn.Turn();
-            longhorn.Stop();
-            model3.Drive();
-            model3.Turn();
-            model3.Stop();
-            cutlass.Drive();
-            cutlass.Turn();
-            cutlass.Stop();
+            List <???> electricVehicles = new List<???> () {
+                fx, fxs, modelS
+              };
 
+            Console.WriteLine("Electric Vehicles");
+            foreach (??? ev in electricVehicles)
+            {
+                Console.WriteLine($"{ev.CurrentChargePercentage}");
+            }
 
+            foreach (??? ev in electricVehicles)
+            {
+                // This should charge the vehicle to 100%
+                ev.ChargeBattery();
+            }
 
+            foreach (??? ev in electricVehicles)
+            {
+                Console.WriteLine($"{ev.CurrentChargePercentage}");
+            }
+
+            /***********************************************/
+
+            Ram ram = new Ram();
+            Cessna cessna150 = new Cessna();
+
+            List <???> gasVehicles = new List<???> () {
+                ram, cessna150
+              };
+
+            Console.WriteLine("Gas Vehicles");
+            foreach (??? gv in gasVehicles)
+            {
+                Console.WriteLine($"{gv.CurrentTankPercentage}");
+            }
+
+            foreach (??? gv in gasVehicles)
+            {
+                // This should completely refuel the gas tank
+                gv.RefuelTank();
+            }
+
+            foreach (??? gv in gasVehicles)
+            {
+                Console.WriteLine($"{gv.CurrentTankPercentage}");
+            }
         }
     }
 }
